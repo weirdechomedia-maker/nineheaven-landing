@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nineheavenco.biz.id/sitemap.xml
