@@ -110,25 +110,19 @@ export default function Hero() {
           }}
         />
 
-        {/* Layer 6: Floating Talismans */}
+        {/* Layer 6: Floating Talismans (decorative, subtle) */}
         <div
-          className="absolute right-20 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 parallax-layer"
-          style={{ transform: getTransform(0.35) }}
+          className="absolute right-[-5%] top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 parallax-layer"
+          style={{ transform: getTransform(0.2) }}
         >
-          <div className="w-14 h-32 border border-[var(--orange)] bg-[rgba(250,82,15,0.1)] flex items-center justify-center text-[var(--gold)] text-[8px] writing-mode: vertical-rl animate-float-jimat shadow-[0_0_15px_var(--orange)]" style={{ animationDelay: '0s' }}>
-            NINE HEAVEN AI
+          <div className="w-16 h-40 border border-[var(--orange)] bg-[rgba(250,82,15,0.08)] flex items-center justify-center text-[var(--gold)] text-[8px] tracking-wider animate-float-jimat shadow-[0_0_15px_rgba(250,82,15,0.3)]" style={{ animationDelay: '0s' }}>
+            <span style={{ writingMode: 'vertical-rl' }}>九天</span>
           </div>
-          <div className="w-14 h-32 border border-[var(--orange)] bg-[rgba(250,82,15,0.1)] flex items-center justify-center text-[var(--gold)] text-[8px] writing-mode: vertical-rl animate-float-jimat shadow-[0_0_15px_var(--orange)]" style={{ animationDelay: '0.2s' }}>
-            DATA QI FLOW
+          <div className="w-16 h-40 border border-[var(--gold)] bg-[rgba(255,217,0,0.06)] flex items-center justify-center text-[var(--gold)] text-[8px] tracking-wider animate-float-jimat shadow-[0_0_15px_rgba(255,217,0,0.2)]" style={{ animationDelay: '0.3s' }}>
+            <span style={{ writingMode: 'vertical-rl' }}>AI</span>
           </div>
-          <div className="w-14 h-32 border border-[var(--orange)] bg-[rgba(250,82,15,0.1)] flex items-center justify-center text-[var(--gold)] text-[8px] writing-mode: vertical-rl animate-float-jimat shadow-[0_0_15px_var(--orange)]" style={{ animationDelay: '0.4s' }}>
-            ASCEND CODE
-          </div>
-          <div className="w-14 h-32 border border-[var(--orange)] bg-[rgba(250,82,15,0.1)] flex items-center justify-center text-[var(--gold)] text-[8px] writing-mode: vertical-rl animate-float-jimat shadow-[0_0_15px_var(--orange)]" style={{ animationDelay: '0.6s' }}>
-            CULTIVATE
-          </div>
-          <div className="w-14 h-32 border border-[var(--orange)] bg-[rgba(250,82,15,0.1)] flex items-center justify-center text-[var(--gold)] text-[8px] writing-mode: vertical-rl animate-float-jimat shadow-[0_0_15px_var(--orange)]" style={{ animationDelay: '0.8s' }}>
-            TRANSCEND
+          <div className="w-16 h-40 border border-[var(--orange)] bg-[rgba(250,82,15,0.08)] flex items-center justify-center text-[var(--gold)] text-[8px] tracking-wider animate-float-jimat shadow-[0_0_15px_rgba(250,82,15,0.3)]" style={{ animationDelay: '0.6s' }}>
+            <span style={{ writingMode: 'vertical-rl' }}>QI</span>
           </div>
         </div>
 
