@@ -4,9 +4,107 @@
 
 :root {
   color-scheme: dark;
+  /* Murim x AI Color Palette */
+  --ink: #121212;
+  --ink-gray: #2a2a2a;
+  --gold: #ffd900;
+  --orange: #fa520f;
+  --ivory: #fffaeb;
+  --mist: rgba(255, 250, 235, 0.6);
+  --amber: #ffa110;
 }
 
 body {
-  @apply bg-gray-950 text-gray-100;
-  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--ivory);
+  font-family: 'Noto Sans SC', 'DM Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+/* Font utility classes */
+.font-brush {
+  font-family: 'Zhi Mang Xing', 'Noto Serif SC', serif;
+}
+
+.font-sans-cn {
+  font-family: 'Noto Sans SC', 'DM Sans', sans-serif;
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(255, 217, 0, 0.15), 0 0 80px rgba(255, 217, 0, 0.05);
+}
+
+.glow-orange {
+  box-shadow: 0 0 30px rgba(250, 82, 15, 0.2);
+}
+
+/* Parallax layer transitions */
+.parallax-layer {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+/* Talisman animation */
+@keyframes float-jimat {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  50% { transform: translateY(-20px) rotate(5deg); opacity: 1; }
+}
+
+.animate-float-jimat {
+  animation: float-jimat 4s ease-in-out infinite;
+}
+
+/* Cursor follower glow */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(250, 82, 15, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  will-change: left, top;
+}
+
+/* Scroll hint */
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(var(--orange), transparent);
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
